@@ -10,7 +10,7 @@ const StackNavigator = createStackNavigator(
         },
         Menu: {
             screen: MenuScreen,
-        }
+        },
     },
     {
         initialRouteName: 'Home',

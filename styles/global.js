@@ -4,7 +4,9 @@ export const globalStyles = StyleSheet.create({
     container: {
         paddingVertical: 30,
         paddingHorizontal: 30,
+        flex: 1,
     },
+    // Home
     infoText: {
         paddingVertical: 5,
         fontSize: 14,
@@ -75,5 +77,52 @@ export const globalStyles = StyleSheet.create({
     },
     menuIcon: {
         paddingRight: 5,
+    },
+    // Menu
+    shopName: {
+        marginTop: 10,
+        marginBottom: 30,
+        paddingVertical: 20,
+        paddingHorizontal: 20,
+        textAlign: 'center',
+        borderTopWidth: 1,
+        borderColor: 'coral',
+        borderBottomWidth: 1,
+        fontSize: 20,
+    },
+    buttonContainer: {
+        marginTop: 80,
+        marginHorizontal: 100,
+    },
+    button: {
+        paddingVertical: 10,
+        backgroundColor: 'coral',
+        borderRadius: 5,
+    },
+    date: {
+        marginTop: 20,
+        textAlign: 'center',
+        fontSize: 16,
+    },
+    addItem: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        // borderTopColor: '#f99991',
+        // borderTopWidth: 1,
+        // borderBottomColor: '#f99991',
+        // borderBottomWidth: 1,
+    },
+    addText: {
+        fontSize: 20,
+    },
+    addIcon: {
+        fontSize: 60,
+        marginLeft: 20,
+        // shadowColor: "#aaa",
+        // shadowOffset: { width: 0, height: 4 },
+        // shadowOpacity: 0.3,
+        // shadowRadius: 4.65,
+        // elevation: 1,
     }
 });

@@ -72,5 +72,8 @@ export const globalStyles = StyleSheet.create({
     },
     statusNumber: {
         fontSize: 24,
+    },
+    menuIcon: {
+        paddingRight: 5,
     }
 });

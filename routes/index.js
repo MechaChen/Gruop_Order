@@ -14,6 +14,7 @@ const StackNavigator = createStackNavigator(
     },
     {
         initialRouteName: 'Home',
+        // initialRouteName: 'Menu',
         defaultNavigationOptions: {
             headerStyle: {
                 backgroundColor: 'coral',

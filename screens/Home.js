@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, FlatList } from 'react-native';
 import { CheckBox } from 'react-native-elements';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { globalStyles } from '../styles/global';
 
 export default function Home() {
@@ -88,6 +89,19 @@ export default function Home() {
     );
 }
 
-Home.navigationOptions = {
-    title: '叫外送囉~',
+Home.navigationOptions = ({ navigation }) => {
+    return {
+        title: '叫外送囉~',
+        headerRight: () => (
+            <View style={globalStyles.menuIcon}>
+                <MaterialCommunityIcons
+                    name="square-edit-outline"
+                    onPress={() => navigation.navigate('Menu')}
+                    size={30}
+                    color="#fff"
+                    style={globalStyles.menuIcon}
+                />
+            </View>
+        ),
+    };
 };

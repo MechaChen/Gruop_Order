@@ -18,25 +18,20 @@ export default function Home() {
         { key: '8', paid: false, name: '柏緯', item: '酥炸大排骨', price: 80 },
     ]);
 
+    // Methods
     const checkItem = (key) => {
         setOrder(order.map((item) => item.key === key ? { ...item, paid: !item.paid } : item ));
     }
 
-    const total = order.reduce((accum, cur) => {
-        return accum + cur.price
-    }, 0);
+    // Variables
+    let total = 0, paidTotal = 0, people = 0, paidPeople = 0;
 
-    const paidTotal = order.reduce((accum, cur) => {
-        return accum + (cur.paid ? cur.price : 0);
-    }, 0);
-
-    const people = order.reduce((accum, cur) => {
-        return accum + 1;
-    }, 0);
-
-    const paidPeople = order.reduce((accum, cur) => {
-        return accum + (cur.paid ? 1 : 0);
-    }, 0);
+    order.forEach((item) => {
+        total += item.price;
+        paidTotal += (item.paid ? item.price : 0);
+        people += 1;
+        paidPeople += (item.paid ? 1 : 0);
+    });
 
     const sortedOrder = () => {
         const paidItems = [];

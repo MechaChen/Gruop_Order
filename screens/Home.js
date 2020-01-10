@@ -53,7 +53,7 @@ export default function Home() {
             <View style={globalStyles.itemTitle}>
                 <Text style={globalStyles.titleText}>Paid</Text>
                 <Text style={globalStyles.titleText}>Name</Text>
-                <Text style={globalStyles.titleText}>Item</Text>
+                <Text style={[globalStyles.titleText, globalStyles.itemMain]}>Item</Text>
                 <Text style={globalStyles.titleText}>Price</Text>
             </View>
             <FlatList
@@ -61,13 +61,15 @@ export default function Home() {
                 data={sortedOrder()}
                 renderItem={({ item }) => (
                     <View style={globalStyles.itemContainer}>
-                        <CheckBox
-                            onPress={() => checkItem(item.key)}
-                            checked={item.paid}
-                            checkedColor="coral"
-                        />
+                        <View style={globalStyles.checkbox}>
+                            <CheckBox
+                                onPress={() => checkItem(item.key)}
+                                checked={item.paid}
+                                checkedColor="coral"
+                            />
+                        </View>
                         <Text style={globalStyles.itemText}>{item.name}</Text>
-                        <Text style={globalStyles.itemText}>{item.item}</Text>
+                        <Text style={[globalStyles.itemText, globalStyles.itemMain]}>{item.item}</Text>
                         <Text style={globalStyles.itemText}>{item.price}</Text>
                     </View>
                 ) }
